@@ -133,10 +133,12 @@
     <ClCompile Include="star.cpp" />
     <ClCompile Include="主程序.cpp" />
     <ClCompile Include="废代码.cpp" />
+    <ClCompile Include="menu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="firework.h" />
     <ClInclude Include="layer.h" />
+    <ClInclude Include="menu.h" />
     <ClInclude Include="shape.h" />
     <ClInclude Include="star.h" />
     <ClInclude Include="music.h" />
