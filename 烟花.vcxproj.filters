@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="源.cpp">
+    <ClCompile Include="主程序.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="layer.cpp">
@@ -45,6 +45,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="shape.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="music.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

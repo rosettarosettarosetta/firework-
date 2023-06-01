@@ -3,19 +3,17 @@
 #include <graphics.h>
 #include <easyx.h>
 #include"star.h"
+#include"shape.h"
 
-layer::layer(int xx ,int yy)
+layer::layer(int xx ,int yy,int sum):x(xx),y(yy),Stars(sum)
 {
-	 x = xx;
-	 y = yy;
-	background();
+	background(x,y);
 	cleardevice();        // 清空屏幕
 }
 
 void layer::Refresh()
 {
-	moon( );
-	getimage(&img, 0, 0, 1000, 720);
+	unchanged();
 	int time = 0;
 	while (1)
 	{
@@ -24,20 +22,27 @@ void layer::Refresh()
 
 		putimage(0, 0, &img);
 		time++;
-		stars.starfresh(time);
+		Stars.update(time);
 
 		FlushBatchDraw();
 	}
 	
 }
 
-void layer::background()
+void layer::unchanged()
+{
+	moon(*this);
+	getimage(&img, 0, 0,x, y);
+}
+
+
+void layer::background(int xx,int yy)
 {
 	initgraph(x, y);//初始化窗口大小   140 120
 	setbkcolor(BLACK);    // 设置背景色为黑色
 }
 
-void layer::moon()
+void moon(layer& l)//访问layer类的私有成员
 {
 	setlinecolor(BLACK);
 	setfillcolor(YELLOW);  //   设置填充颜色为白色

@@ -131,7 +131,7 @@
     <ClCompile Include="layer.cpp" />
     <ClCompile Include="shape.cpp" />
     <ClCompile Include="star.cpp" />
-    <ClCompile Include="源.cpp" />
+    <ClCompile Include="主程序.cpp" />
     <ClCompile Include="废代码.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +139,7 @@
     <ClInclude Include="layer.h" />
     <ClInclude Include="shape.h" />
     <ClInclude Include="star.h" />
+    <ClInclude Include="music.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

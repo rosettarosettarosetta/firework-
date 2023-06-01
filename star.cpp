@@ -1,26 +1,27 @@
 #include "star.h"
 
-star::star()
+star::star(int number) :sum(number)//, shape(InvalidColor)
 {
-	for (int i = 0; i < 10; i++)
+
+	for (int i = 0; i < sum; i++)
 	{
+		stars.push_back(shapes{});
 		stars[i].x = 5 + rand() % 990;
 		stars[i].y = 5+rand()%710;
 		stars[i].angle = rand()%72;
 		stars[i].r =2 + rand()%20;
-		//setStar(i);
+		
 	}
 } 
 
-
-void star::starfresh(int time)
+void star::update(int time)
 {
+
 	int colorChange3;
 	int colorChange2;
 	int angleChange;
 
-
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < sum; i++)
 		{
 			angleChange = rand() % 100;
 			cout << time;
@@ -41,25 +42,27 @@ void star::starfresh(int time)
 				a += pi * 4 / 5;
 			}
 
-			setpolyfillmode(WINDING);
+			
 			colorChange3 = rand() % 255;
 			colorChange2 = 200 + rand () % 55;
 			stars[i].color= RGB(static_cast<BYTE>(colorChange2), static_cast<BYTE>(colorChange2), static_cast<BYTE>(colorChange3));
-			setfillcolor(stars[i].color);
-			// 绘制五角星(无边框)
-			solidpolygon(stars[i].place, 5);
+			draw(i);
 		}
 
 		Sleep(300);
 
 		
-
-
-	
 }
 
+void star::draw(int i)
+{
+	setpolyfillmode(WINDING);
+	setfillcolor(stars[i].color);
+	// 绘制五角星(无边框)
+	solidpolygon(stars[i].place, 5);
+}
 
-
+/*
 void star::setStar(int i)
 {
 	setfillcolor(stars[i].color);
@@ -80,3 +83,5 @@ void star::setStar(int i)
 	solidpolygon(stars[i].place, 5);
 
 }
+
+*/
