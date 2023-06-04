@@ -23,6 +23,10 @@ void layer::Refresh()
 		time++;
 		Stars.update(time);
 		fire.update(time);
+		if (MouseHit())
+		{
+
+		}
 		Sleep(50);
 		FlushBatchDraw();
 	}
