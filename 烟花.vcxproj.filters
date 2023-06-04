@@ -36,6 +36,9 @@
     <ClCompile Include="fire.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\..\Documents\Tencent Files\2142219057\FileRecv\第三模块.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="layer.h">
@@ -54,6 +57,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="fire.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="textprint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="printmode.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

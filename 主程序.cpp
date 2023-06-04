@@ -9,6 +9,8 @@
 #include"fire.h"
 #include"music.h"
 #include<mmsystem.h>
+#include"printmode.h"
+#include"textprint.h"
 #pragma comment(lib,"winmm.lib")
 using namespace std;
 
