@@ -15,12 +15,13 @@ public:
 		for (int i = 0; a[i]; i++)
 			str[i] = a[i];
 	}
-
+	
+		
 	wchar_t getstr(int i)
 	{
 		return str[i];
 	}
-	virtual void print() = 0;
+	virtual void print(int ) = 0;
 
 private:
 	wchar_t str[100] = { 0 };

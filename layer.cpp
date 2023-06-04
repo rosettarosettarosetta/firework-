@@ -5,6 +5,8 @@
 #include"star.h"
 #include"shape.h"
 
+wchar_t a[1] = { 0 };//没得用
+
 layer::layer(int xx ,int yy,int sum):x(xx),y(yy),Stars(sum),fire(xx,yy)
 {
 	background(x,y);
@@ -23,10 +25,7 @@ void layer::Refresh()
 		time++;
 		Stars.update(time);
 		fire.update(time);
-		if (MouseHit())
-		{
-
-		}
+		mouse(time);
 		Sleep(50);
 		FlushBatchDraw();
 	}
@@ -57,7 +56,6 @@ void moon(layer& l)//访问layer类的私有成员
 }
 
 
-
 int layer::get_x()
 {
 	return x;
@@ -66,4 +64,42 @@ int layer::get_x()
 int layer::get_y()
 {
 	return y;
+}
+
+void layer::mouse(int time)
+{
+	
+	if (MouseHit())
+	{
+		// 获取鼠标事件的信息
+		MOUSEMSG mouseMsg = GetMouseMsg();
+
+		// 获取鼠标坐标
+		int mouseX = mouseMsg.x;
+		int mouseY = mouseMsg.y;
+
+		// 判断鼠标所在的区域
+		if (mouseX >= 0 && mouseX <= vertical && mouseY >= 0 && mouseY <= Sideways)
+		{
+			Revolve r(a);
+			ptr = &r;
+			ptr->print(time);
+			return;
+		}
+		if (mouseX >= vertical  && mouseX <=1000 && mouseY >= Sideways && mouseY <= 720)
+		{ 
+			Deeper r(a);
+			ptr = &r;
+			ptr->print(time);
+			return;
+		}
+		if (mouseX >= vertical && mouseX <= 1000 && mouseY >= Sideways && mouseY <= 720)
+		{
+			Deeper r(a);
+			ptr = &r;
+			ptr->print(time);
+			return;
+		} 
+	}
+
 }

@@ -2,6 +2,8 @@
 #include"shape.h"
 #include"fire.h"
 #include<vector>
+#include"printmode.h"
+#include"textprint.h"
 #ifndef LAYER_H_
 #define LAYER_H_
 
@@ -13,15 +15,20 @@ public:
 	void Refresh();
 	int get_x();
 	int get_y();
+	void mouse(int);
 	friend void moon(layer& l);
 private:
 	IMAGE img;
 	vector<shape*> shapes_;
 	int x, y;
 	void background(int,int);
-	
+	Textprint* ptr;
 	Fire fire;
 	star Stars;
+
+	const int vertical = 850;//Êú×Å
+	const int Sideways = 550;
+
 };
 
 
