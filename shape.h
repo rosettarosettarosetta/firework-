@@ -25,7 +25,7 @@ public:
 	shape();
 	//virtual ~shape();
 	virtual void update(int) = 0;
-	virtual void draw(int) = 0;
+	virtual void draw(int) =0;
 	void fillcolor();
 	void getcolor(COLORREF);
 	

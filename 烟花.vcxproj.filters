@@ -27,13 +27,13 @@
     <ClCompile Include="废代码.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="firework.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="shape.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="menu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fire.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -42,9 +42,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="star.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="firework.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="shape.h">
@@ -56,5 +53,13 @@
     <ClInclude Include="menu.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="fire.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="烟花夜.wav">
+      <Filter>资源文件</Filter>
+    </Media>
   </ItemGroup>
 </Project>

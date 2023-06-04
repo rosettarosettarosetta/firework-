@@ -5,7 +5,7 @@
 #include"star.h"
 #include"shape.h"
 
-layer::layer(int xx ,int yy,int sum):x(xx),y(yy),Stars(sum)
+layer::layer(int xx ,int yy,int sum):x(xx),y(yy),Stars(sum),fire(xx,yy)
 {
 	background(x,y);
 	cleardevice();        // 清空屏幕
@@ -19,11 +19,11 @@ void layer::Refresh()
 	{
 		BeginBatchDraw();
 		cleardevice();
-
 		putimage(0, 0, &img);
 		time++;
 		Stars.update(time);
-
+		fire.update(time);
+		Sleep(50);
 		FlushBatchDraw();
 	}
 	
@@ -54,3 +54,12 @@ void moon(layer& l)//访问layer类的私有成员
 
 
 
+int layer::get_x()
+{
+	return x;
+}
+
+int layer::get_y()
+{
+	return y;
+}

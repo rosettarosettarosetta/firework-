@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="firework.cpp" />
+    <ClCompile Include="fire.cpp" />
     <ClCompile Include="layer.cpp" />
     <ClCompile Include="shape.cpp" />
     <ClCompile Include="star.cpp" />
@@ -136,12 +136,15 @@
     <ClCompile Include="menu.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="firework.h" />
+    <ClInclude Include="fire.h" />
     <ClInclude Include="layer.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="shape.h" />
     <ClInclude Include="star.h" />
     <ClInclude Include="music.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="烟花夜.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
