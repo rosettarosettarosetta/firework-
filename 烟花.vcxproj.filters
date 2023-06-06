@@ -62,6 +62,9 @@
     <ClInclude Include="printmode.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="music1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Media Include="烟花夜.wav">

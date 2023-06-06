@@ -11,6 +11,7 @@
 #include<mmsystem.h>
 #include"printmode.h"
 #include"textprint.h"
+#include"music1.h"
 #pragma comment(lib,"winmm.lib")
 using namespace std;
 

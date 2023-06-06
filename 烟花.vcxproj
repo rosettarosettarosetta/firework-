@@ -144,6 +144,7 @@
     <ClInclude Include="music.h" />
     <ClInclude Include="textprint.h" />
     <ClInclude Include="printmode.h" />
+    <ClInclude Include="music1.h" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="烟花夜.wav" />
