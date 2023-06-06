@@ -141,13 +141,19 @@
     <ClInclude Include="menu.h" />
     <ClInclude Include="shape.h" />
     <ClInclude Include="star.h" />
-    <ClInclude Include="music.h" />
     <ClInclude Include="textprint.h" />
     <ClInclude Include="printmode.h" />
-    <ClInclude Include="music1.h" />
+    <ClInclude Include="music.h" />
+    <ClInclude Include="logo.h" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="烟花夜.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="烟花.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="烟花.aps" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

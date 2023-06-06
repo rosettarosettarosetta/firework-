@@ -3,6 +3,7 @@
 #include <graphics.h>
 #include <easyx.h>
 #include"star.h"
+#include"logo.h"
 #include"shape.h"
 
 wchar_t a[1] = { 0 };//没得用
@@ -23,9 +24,11 @@ void layer::Refresh()
 		cleardevice();
 		putimage(0, 0, &img);
 		time++;
+		
 		Stars.update(time);
 		fire.update(time);
 		mouse(time);
+		
 		Sleep(50);
 		FlushBatchDraw();
 	}
@@ -35,6 +38,7 @@ void layer::Refresh()
 void layer::unchanged()
 {
 	moon(*this);
+	logo.getinformation(100, 650, RED, 1);
 	getimage(&img, 0, 0,x, y);
 }
 
@@ -77,29 +81,38 @@ void layer::mouse(int time)
 		// 获取鼠标坐标
 		int mouseX = mouseMsg.x;
 		int mouseY = mouseMsg.y;
-
+		cout << mouseX << mouseY << endl;
 		// 判断鼠标所在的区域
 		if (mouseX >= 0 && mouseX <= vertical && mouseY >= 0 && mouseY <= Sideways)
 		{
+		//	cout << "1";
 			Revolve r(a);
 			ptr = &r;
 			ptr->print(time);
 			return;
 		}
-		if (mouseX >= vertical  && mouseX <=1000 && mouseY >= Sideways && mouseY <= 720)
+		if (mouseX >= 650  && mouseX <=1000 && mouseY >= 540 && mouseY <= 720)
 		{ 
+		//	cout << "2";
 			Deeper r(a);
 			ptr = &r;
 			ptr->print(time);
 			return;
 		}
-		if (mouseX >= vertical && mouseX <= 1000 && mouseY >= Sideways && mouseY <= 720)
+		if (mouseX >= 0 && mouseX <=200 && mouseY >=550  && mouseY <= 720)
 		{
-			Deeper r(a);
+			//cout << "3";
+			Bothsides r(a);
 			ptr = &r;
 			ptr->print(time);
 			return;
 		} 
+
+		//cout << "4";
+		Bigger r(a);
+		ptr = &r;
+		ptr->print(time);
+		return;
 	}
 
 }

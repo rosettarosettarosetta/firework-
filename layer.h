@@ -2,6 +2,7 @@
 #include"shape.h"
 #include"fire.h"
 #include<vector>
+#include"logo.h"
 #include"printmode.h"
 #include"textprint.h"
 #ifndef LAYER_H_
@@ -25,7 +26,7 @@ private:
 	Textprint* ptr;
 	Fire fire;
 	star Stars;
-
+	Logo logo;
 	const int vertical = 850;//Êú×Å
 	const int Sideways = 550;
 

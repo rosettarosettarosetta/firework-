@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\music">
+      <UniqueIdentifier>{36576d39-7b07-46e5-9c92-6045e46cc2b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\图形">
+      <UniqueIdentifier>{830791ed-0728-438b-ab10-2008f3f418f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\队员">
+      <UniqueIdentifier>{a5496947-8454-4422-b43a-8ccc47ba7f3b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="主程序.cpp">
@@ -41,28 +50,28 @@
     <ClInclude Include="layer.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="star.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="shape.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="music.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="menu.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="fire.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="music.h">
+      <Filter>头文件\music</Filter>
+    </ClInclude>
     <ClInclude Include="textprint.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\队员</Filter>
     </ClInclude>
     <ClInclude Include="printmode.h">
-      <Filter>头文件</Filter>
+      <Filter>头文件\队员</Filter>
     </ClInclude>
-    <ClInclude Include="music1.h">
+    <ClInclude Include="shape.h">
+      <Filter>头文件\图形</Filter>
+    </ClInclude>
+    <ClInclude Include="star.h">
+      <Filter>头文件\图形</Filter>
+    </ClInclude>
+    <ClInclude Include="logo.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -70,5 +79,15 @@
     <Media Include="烟花夜.wav">
       <Filter>资源文件</Filter>
     </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="烟花.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="烟花.aps">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

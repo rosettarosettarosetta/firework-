@@ -4,10 +4,7 @@
 #include<time.h>
 #include<math.h>
 #include"Textprint.h"
-
-
-
-
+const double pai = 3.1415926;
 class Onebyone :public Textprint//字一个一个出现
 {
 public:
@@ -52,15 +49,15 @@ public:
 		int x = 20;
 		int y = 20;
 		
-			HRGN rgn = CreateRectRgn(0, 180, 1080, 360);
-			setcliprgn(rgn);
-			clearcliprgn();
+		//	HRGN rgn = CreateRectRgn(0, 180, 1080, 360);
+		//	setcliprgn(rgn);
+		//	clearcliprgn();
 			//cleardevice();
 			//setbkcolor(BLUE);
 			settextstyle(25, 0, _T("方正舒体"));
 			//settextstyle(35, 0, _T("方正舒体"));
-			outtextxy(850, 550, _T("张梓瑶，202221147036"));
-			outtextxy(850 - x, 600, _T("第二模块：Logo呈现"));
+			outtextxy(650, 550, _T("张梓瑶，202221147036"));
+			outtextxy(650, 600, _T("第二模块：Logo呈现"));
 			x += 21;
 			//if (i < 12)
 			//	y += 25;
@@ -75,10 +72,11 @@ public:
 	{}
 	virtual void print(int time)
 	{
+		/*
 		int redius = 300;
 		int coordx = 1080 / 2 + 250;
 		int coordy = 720 / 2 + 50;
-		const double pai = 3.1415926;
+		
 		
 		int num = 60;
 		double n = 1;
@@ -91,9 +89,19 @@ public:
 			settextstyle(int(10 + n), 0, _T("方正舒体"));
 			n += 0.5;
 			//n += 1;
-			settextcolor(YELLOW);
-			outtextxy(x - 850, y - 550, _T("蒋子韬 202221147045"));
-			outtextxy(x - 850, y - 600, _T("第一模块：烟花绽放爱心雨"));
+		*/
+		int colorChange3;
+		int colorChange2;
+		int angleChange;
+		colorChange3 = rand() % 255;
+		colorChange2 = 200 + rand() % 55;
+		int color = RGB(static_cast<BYTE>(colorChange2), static_cast<BYTE>(colorChange3), static_cast<BYTE>(colorChange3));
+		  int redius = 20;
+		  int x = (int)(cos(time/3) * redius);
+		  int y = (int)(sin(time/3) * redius);
+			settextcolor(color);
+			outtextxy( 700+x,  600+y, _T("蒋子韬 202221147045"));
+			outtextxy( 700+x,  650+y, _T("第一模块：烟花绽放爱心雨"));
 			
 	}
 };
@@ -106,6 +114,7 @@ public:
 	virtual void print(int time)
 	{
 		//COLORREF bk = getbkcolor();
+		/*
 		COLORREF bk = BLUE;
 		COLORREF te = GREEN;
 		int bkcolor[3] = { GetRValue(bk),GetGValue(bk) ,GetBValue(bk) };
@@ -117,9 +126,12 @@ public:
 			settextstyle(25, 0, _T("方正舒体"));
 			//settextstyle(35, 0, _T("方正舒体"));
 			//settextcolor(RGB(bkcolor[0] + r * (time%50), bkcolor[1] + g * (time % 50), bkcolor[2] + b * (time % 50)));
-			settextcolor(YELLOW);
-			outtextxy(650, 600, _T("韩建军 202221147043"));
-			outtextxy(500, 650, _T("第三模块：配乐，祝福语，小组成员名动态呈现"));
+			
+		*/
+
+		settextcolor(RED);
+		outtextxy(650, 600, _T("韩建军 202221147043"));
+		outtextxy(500, 650, _T("第三模块：配乐，祝福语，小组成员名动态呈现"));
 			
 		//}
 		
@@ -134,15 +146,15 @@ public:
 	virtual void print(int time )
 	{
 		
-			HRGN rgn = CreateRectRgn(0, 540, 1080, 720);
-			setcliprgn(rgn);
-			clearcliprgn();
+			//HRGN rgn = CreateRectRgn(0, 540, 1080, 720);
+			//setcliprgn(rgn);
+			//clearcliprgn();
 			//cleardevice();
 			//setbkcolor(BLUE);
 			setcolor(RED);
-			settextstyle((time%7), 0, _T("方正舒体"));
-			outtextxy(850, 550, _T("沈辰 202221147064"));
-			outtextxy(800, 600, _T("第四模块：系统整合及界面设计"));
+		//	settextstyle((time%7), 0, _T("方正舒体"));
+			outtextxy(650, 600, _T("沈辰 202221147064"));
+			outtextxy(500, 650, _T("第四模块:月亮、系统整合及界面设计"));
 			//outtextxy(325, 320, _T("沈辰 202221147064"));
 			//outtextxy(450, 370, _T("第四模块：系统整合及界面设计"));
 
