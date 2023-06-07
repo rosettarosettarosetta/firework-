@@ -5,23 +5,10 @@
 class Textprint
 {
 public:
-	Textprint(wchar_t a[])
-	{
-		setstr(a);
-	}
-
-	void setstr(wchar_t a[])
-	{
-		for (int i = 0; a[i]; i++)
-			str[i] = a[i];
-	}
-	
-		
-	wchar_t getstr(int i)
-	{
-		return str[i];
-	}
-	virtual void print(int ) = 0;
+	Textprint(wchar_t a[]);
+	void setstr(wchar_t a[]);
+	wchar_t getstr(int );
+    virtual void print(int ) = 0;
 
 private:
 	wchar_t str[100] = { 0 };

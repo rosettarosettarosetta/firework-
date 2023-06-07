@@ -13,14 +13,17 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="头文件\music">
-      <UniqueIdentifier>{36576d39-7b07-46e5-9c92-6045e46cc2b9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="头文件\图形">
       <UniqueIdentifier>{830791ed-0728-438b-ab10-2008f3f418f0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\队员">
+    <Filter Include="头文件\队员字幕">
       <UniqueIdentifier>{a5496947-8454-4422-b43a-8ccc47ba7f3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\队员字幕">
+      <UniqueIdentifier>{2a3e4bf6-ecbf-439d-83b7-7d1a65f8674d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\音乐">
+      <UniqueIdentifier>{36576d39-7b07-46e5-9c92-6045e46cc2b9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -45,6 +48,12 @@
     <ClCompile Include="fire.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="printmode.cpp">
+      <Filter>源文件\队员字幕</Filter>
+    </ClCompile>
+    <ClCompile Include="textprint.cpp">
+      <Filter>源文件\队员字幕</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="layer.h">
@@ -53,17 +62,14 @@
     <ClInclude Include="menu.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="fire.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="music.h">
-      <Filter>头文件\music</Filter>
+      <Filter>头文件\音乐</Filter>
     </ClInclude>
     <ClInclude Include="textprint.h">
-      <Filter>头文件\队员</Filter>
+      <Filter>头文件\队员字幕</Filter>
     </ClInclude>
     <ClInclude Include="printmode.h">
-      <Filter>头文件\队员</Filter>
+      <Filter>头文件\队员字幕</Filter>
     </ClInclude>
     <ClInclude Include="shape.h">
       <Filter>头文件\图形</Filter>
@@ -73,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="logo.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fire.h">
+      <Filter>头文件\图形</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -89,5 +98,10 @@
     <None Include="烟花.aps">
       <Filter>资源文件</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="back.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

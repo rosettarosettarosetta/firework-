@@ -13,7 +13,7 @@
 
 using namespace std;
 
-static double pi = 3.14159265358979323846;
+
 
 #ifndef STAR_H_
 #define STAR_H_

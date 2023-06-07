@@ -4,6 +4,7 @@
 #include <ctime>	
 #include <cstdlib>
 
+
 Fire::Fire(int xx,int yy):WIDTH(xx), HEIGHT(yy)
 {
 	t1 = timeGetTime();
@@ -16,6 +17,39 @@ Fire::Fire(int xx,int yy):WIDTH(xx), HEIGHT(yy)
 		arr[i].x = arr[i].max_x;
 		arr[i].y = rand() % 100 + 720;
 		arr[i].ready = true;
+	}
+}
+
+void Fire::update(int time)
+{
+	tt1 = timeGetTime();
+	if (tt1 - t1 > 500)
+	{
+		flag = rand() % 10 + 1;//随机发射一个
+		if (JudgePlay(flag) == true)
+			Change(flag);
+		t1 = tt1;
+	}
+
+	tt2 = timeGetTime();
+	if (tt2 - t2 > 20)
+	{
+		PlayFire();
+		t2 = tt2;
+	}
+
+	tt3 = timeGetTime();
+	if (tt3 - t3 > 50)
+	{
+		Fire_Burst();
+		t3 = tt3;
+	}
+
+	for (int i = 0; i < 3000; i++)
+	{
+		int a = rand() % WIDTH;
+		int b = rand() % HEIGHT;
+		putpixel(a, b, BLACK);
 	}
 }
 
@@ -86,7 +120,7 @@ void Fire::Fire_Burst()
 			for (int i = 0; i < num; i++)
 			{
 				//粒子位置
-				double radian = (PI / 180) * (360 / num) * i;
+				double radian = (pi / 180) * (360 / num) * i;
 				int x = (int)(arr[n].x + cos(radian) * arr[n].r);
 				int y = (int)(arr[n].y - sin(radian) * arr[n].r);
 				// 绘制粒子
@@ -108,38 +142,7 @@ void Fire::Fire_Burst()
 	}
 }
 
-void Fire::update(int time)
-{
-	tt1 = timeGetTime();
-	if (tt1 - t1 > 500)
-	{
-		flag = rand() % 10 + 1;
-		if (JudgePlay(flag) == true)
-			Change(flag);
-		t1 = tt1;
-	}
 
-	tt2 = timeGetTime();
-	if (tt2 - t2 > 20)
-	{
-		PlayFire();
-		t2 = tt2;
-	}
-
-	tt3 = timeGetTime();
-	if (tt3 - t3 > 50)
-	{
-		Fire_Burst();
-		t3 = tt3;
-	}
-
-	for (int i = 0; i < 3000; i++)
-	{
-		int a = rand() % WIDTH;
-		int b = rand() % HEIGHT;
-		putpixel(a, b, BLACK);
-	}
-}
 
 void Fire::draw(int time)
 {

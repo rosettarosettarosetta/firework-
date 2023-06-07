@@ -46,6 +46,7 @@ public:
 	virtual void print(int time)
 	{
 		settextcolor(MAGENTA);
+		setbkcolor(TRANSPARENT);
 		int x = 20;
 		int y = 20;
 		
@@ -100,6 +101,7 @@ public:
 		  int x = (int)(cos(time/3) * redius);
 		  int y = (int)(sin(time/3) * redius);
 			settextcolor(color);
+				setbkcolor(TRANSPARENT);
 			outtextxy( 700+x,  600+y, _T("蒋子韬 202221147045"));
 			outtextxy( 700+x,  650+y, _T("第一模块：烟花绽放爱心雨"));
 			
@@ -130,6 +132,7 @@ public:
 		*/
 
 		settextcolor(RED);
+		setbkcolor(TRANSPARENT);
 		outtextxy(650, 600, _T("韩建军 202221147043"));
 		outtextxy(500, 650, _T("第三模块：配乐，祝福语，小组成员名动态呈现"));
 			
@@ -152,6 +155,7 @@ public:
 			//cleardevice();
 			//setbkcolor(BLUE);
 			setcolor(RED);
+			setbkcolor(TRANSPARENT);
 		//	settextstyle((time%7), 0, _T("方正舒体"));
 			outtextxy(650, 600, _T("沈辰 202221147064"));
 			outtextxy(500, 650, _T("第四模块:月亮、系统整合及界面设计"));

@@ -2,12 +2,11 @@
 #include <graphics.h>
 #include <easyx.h>
 #include <vector>
-
 #include<iostream>
 using namespace std;
 
 const COLORREF InvalidColor = 0xFFFFFFFF;
-
+static double pi = 3.14159265;
 
 struct shapes
 {

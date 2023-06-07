@@ -134,6 +134,8 @@
     <ClCompile Include="主程序.cpp" />
     <ClCompile Include="废代码.cpp" />
     <ClCompile Include="menu.cpp" />
+    <ClCompile Include="printmode.cpp" />
+    <ClCompile Include="textprint.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fire.h" />
@@ -154,6 +156,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="烟花.aps" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="back.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

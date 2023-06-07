@@ -26,13 +26,13 @@ struct Final_Pos :shapes
 #ifndef FIRE_H
 #define FIRE_H
 
-const double PI = 3.1415926;
 const  int NUM = 10;
 class Fire :public shape
 {
 private:
 	 int WIDTH  ;
 	 int HEIGHT  ;
+	 int num;
 	 DWORD t1 , tt1, t2 , tt2;
 	 DWORD t3 , tt3;
 	 int flag;
@@ -42,13 +42,15 @@ private:
 public:
 	Fire(int,int);
 	~Fire();
+	void update(int);
 	void CreateFire(int n);//创建烟花属性
 	void PlayFire();//发射烟花
+	void Fire_Burst();			 //烟花绽放
+	
+	void draw(int);
 	bool JudgePlay(int n);//判断烟花发射
 	void Change(int n);//改变烟花状态
-	void Fire_Burst();			 //烟花绽放
-	void update(int) ;
-	void draw(int);
+
 };
 
 #endif

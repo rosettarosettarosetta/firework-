@@ -1,10 +1,10 @@
 #include "layer.h"
 #include<iostream>
-#include <graphics.h>
 #include <easyx.h>
 #include"star.h"
 #include"logo.h"
 #include"shape.h"
+#include <graphics.h>
 
 wchar_t a[1] = { 0 };//没得用
 
@@ -37,26 +37,42 @@ void layer::Refresh()
 
 void layer::unchanged()
 {
+
+	loadimage(&img, _T("back.jpg"),1000,720);
+	putimage(0, 0, &img);//输出照片,坐标和地址
 	moon(*this);
 	logo.getinformation(100, 650, RED, 1);
 	getimage(&img, 0, 0,x, y);
 }
 
 
-void layer::background(int xx,int yy)
+void layer::background(int xx, int yy)
 {
 	initgraph(x, y);//初始化窗口大小   140 120
-	setbkcolor(BLACK);    // 设置背景色为黑色
+	loadimage(&img, _T("back.jpg"),1000,720);
+	putimage(0, 0, &img);//输出照片,坐标和地址
 }
 
 void moon(layer& l)//访问layer类的私有成员
 {
 	setlinecolor(BLACK);
-	setfillcolor(YELLOW);  //   设置填充颜色为白色
-	fillcircle(850, 100, 50);  // 绘制外圆
-	setfillcolor(BLACK);  // 设置填充颜色为黑色
-	fillcircle(880, 90, 50);   // 绘制内圆
+	setfillcolor(YELLOW);
+	fillcircle(850, 100, 50);
+	setfillcolor(BLACK);
+	fillcircle(880, 90, 50);
 
+	/*
+	IMAGE img;
+	loadimage(&img, _T("back.jpg"));
+	int centerX = 880;  // 圆心 x 坐标
+	int centerY = 90;  // 圆心 y 坐标
+	int radius = 50;  // 圆的半径
+
+	setbkmode(TRANSPARENT);  // 设置背景模式为透明
+
+	setclipcircle(centerX, centerY, radius);  // 设置剪裁区域为圆形
+	putimage(centerX - radius, centerY - radius, &img);  // 在指定位置绘制
+	*/
 }
 
 
@@ -82,6 +98,7 @@ void layer::mouse(int time)
 		int mouseX = mouseMsg.x;
 		int mouseY = mouseMsg.y;
 		cout << mouseX << mouseY << endl;
+
 		// 判断鼠标所在的区域
 		if (mouseX >= 0 && mouseX <= vertical && mouseY >= 0 && mouseY <= Sideways)
 		{
@@ -115,4 +132,10 @@ void layer::mouse(int time)
 		return;
 	}
 
+}
+
+void setclipcircle(int centerX, int centerY, int radius)
+{
+	setorigin(centerX - radius, centerY - radius);  // 设置坐标原点为圆心
+	setaspectratio(1, 1);  // 设置坐标轴比例为1:1
 }
