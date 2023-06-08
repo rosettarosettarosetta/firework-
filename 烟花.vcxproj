@@ -136,6 +136,7 @@
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="printmode.cpp" />
     <ClCompile Include="textprint.cpp" />
+    <ClCompile Include="logo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="fire.h" />

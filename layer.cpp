@@ -14,6 +14,13 @@ layer::layer(int xx ,int yy,int sum):x(xx),y(yy),Stars(sum),fire(xx,yy)
 	cleardevice();        // 清空屏幕
 }
 
+void layer::background(int xx, int yy)
+{
+	initgraph(x, y);//初始化窗口大小   140 120
+	loadimage(&img, _T("back.jpg"), 1000, 720);
+	putimage(0, 0, &img);//输出照片,坐标和地址
+}
+
 void layer::Refresh()
 {
 	unchanged();
@@ -37,8 +44,6 @@ void layer::Refresh()
 
 void layer::unchanged()
 {
-
-	loadimage(&img, _T("back.jpg"),1000,720);
 	putimage(0, 0, &img);//输出照片,坐标和地址
 	moon(*this);
 	logo.getinformation(100, 650, RED, 1);
@@ -46,12 +51,7 @@ void layer::unchanged()
 }
 
 
-void layer::background(int xx, int yy)
-{
-	initgraph(x, y);//初始化窗口大小   140 120
-	loadimage(&img, _T("back.jpg"),1000,720);
-	putimage(0, 0, &img);//输出照片,坐标和地址
-}
+
 
 void moon(layer& l)//访问layer类的私有成员
 {
@@ -60,19 +60,6 @@ void moon(layer& l)//访问layer类的私有成员
 	fillcircle(850, 100, 50);
 	setfillcolor(BLACK);
 	fillcircle(880, 90, 50);
-
-	/*
-	IMAGE img;
-	loadimage(&img, _T("back.jpg"));
-	int centerX = 880;  // 圆心 x 坐标
-	int centerY = 90;  // 圆心 y 坐标
-	int radius = 50;  // 圆的半径
-
-	setbkmode(TRANSPARENT);  // 设置背景模式为透明
-
-	setclipcircle(centerX, centerY, radius);  // 设置剪裁区域为圆形
-	putimage(centerX - radius, centerY - radius, &img);  // 在指定位置绘制
-	*/
 }
 
 
