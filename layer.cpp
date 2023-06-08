@@ -26,6 +26,10 @@ void layer::Refresh()
 {
 	unchanged();
 	int time = 0;
+	if (time == 0)
+	{
+		bless(time);
+	}
 	while (1)
 	{
 		BeginBatchDraw();
@@ -82,7 +86,7 @@ int layer::get_y()
 
 void layer::mouse(int time)
 {
-	bless(time);
+	//bless(time);
 	if (MouseHit())
 	{
 		// 获取鼠标事件的信息
@@ -91,7 +95,6 @@ void layer::mouse(int time)
 		// 获取鼠标坐标
 		int mouseX = mouseMsg.x;
 		int mouseY = mouseMsg.y;
-		cout << mouseX << mouseY << endl;
 
 		// 判断鼠标所在的区域
 		if (mouseX >= 0 && mouseX <= vertical && mouseY >= 0 && mouseY <= Sideways)

@@ -127,13 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\..\Documents\Tencent Files\2142219057\FileRecv\第三模块\第三模块.cpp" />
     <ClCompile Include="fire.cpp" />
     <ClCompile Include="layer.cpp" />
     <ClCompile Include="shape.cpp" />
     <ClCompile Include="star.cpp" />
     <ClCompile Include="主程序.cpp" />
-    <ClCompile Include="废代码.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="printmode.cpp" />
     <ClCompile Include="textprint.cpp" />

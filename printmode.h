@@ -12,7 +12,7 @@ public:
 	{}
 	virtual void print(int time)
 	{
-		int x = 150;
+		int x = 50;
 		int y = 250;
 		for (int i = 0; getstr(i); i += 1)
 		{
@@ -44,23 +44,22 @@ public:
 	{}
 	virtual void print(int time)
 	{
-		settextcolor(MAGENTA);
+		int colorChange3;
+		int colorChange2;
+		int angleChange;
+		colorChange3 = rand() % 255;
+		colorChange2 = 200 + rand() % 55;
+		int color = RGB(static_cast<BYTE>(colorChange2), static_cast<BYTE>(colorChange3), static_cast<BYTE>(colorChange3));
+		int redius = 20;
+		int x = (int)(cos(time / 3) * redius);
+		int y = (int)(sin(time / 3) * redius);
+		settextcolor(color);
 		setbkcolor(TRANSPARENT);
-		int x = 20;
-		int y = 20;
-		
-		//	HRGN rgn = CreateRectRgn(0, 180, 1080, 360);
-		//	setcliprgn(rgn);
-		//	clearcliprgn();
-			//cleardevice();
-			//setbkcolor(BLUE);
-			settextstyle(25, 0, _T("方正舒体"));
-			//settextstyle(35, 0, _T("方正舒体"));
-			outtextxy(650, 550, _T("张梓瑶，202221147036"));
-			outtextxy(650, 600, _T("第二模块：Logo呈现"));
-			x += 21;
-			//if (i < 12)
-			//	y += 25;
+		settextstyle(22, 0, _T("微软雅黑"));
+		setbkmode(TRANSPARENT);
+
+		outtextxy(700 + x, 600 + y, _T("张梓瑶 202221147045"));
+		outtextxy(700 + x, 650 + y, _T("第二模块：Logo呈现"));
 		
 	}
 };
@@ -114,26 +113,22 @@ public:
 	{}
 	virtual void print(int time)
 	{
-		//COLORREF bk = getbkcolor();
-		/*
-		COLORREF bk = BLUE;
-		COLORREF te = GREEN;
-		int bkcolor[3] = { GetRValue(bk),GetGValue(bk) ,GetBValue(bk) };
-		int tecolor[3] = { GetRValue(te),GetGValue(te) ,GetBValue(te) };
-		int r = (tecolor[0] - bkcolor[0]) / 50;
-		int g = (tecolor[1] - bkcolor[1]) / 50;
-		int b = (tecolor[2] - bkcolor[2]) / 50;
-
-			settextstyle(25, 0, _T("方正舒体"));
-			//settextstyle(35, 0, _T("方正舒体"));
-			//settextcolor(RGB(bkcolor[0] + r * (time%50), bkcolor[1] + g * (time % 50), bkcolor[2] + b * (time % 50)));
-			
-		*/
-
-		settextcolor(RED);
+		int colorChange3;
+		int colorChange2;
+		int angleChange;
+		colorChange3 = rand() % 255;
+		colorChange2 = 200 + rand() % 55;
+		int color = RGB(static_cast<BYTE>(colorChange2), static_cast<BYTE>(colorChange3), static_cast<BYTE>(colorChange3));
+		int redius = 20;
+		int x = (int)(cos(time / 3) * redius);
+		int y = (int)(sin(time / 3) * redius);
+		settextcolor(color);
 		setbkcolor(TRANSPARENT);
-		outtextxy(650, 600, _T("韩建军 202221147043"));
-		outtextxy(500, 650, _T("第三模块：配乐，祝福语，小组成员名动态呈现"));
+		settextstyle(22, 0, _T("微软雅黑"));
+		setbkmode(TRANSPARENT);
+
+		outtextxy(700 + x, 600 + y, _T("韩建军 202221147043"));
+		outtextxy(700 + x, 650 + y, _T("第三模块：配乐，祝福语，小组成员名动态呈现"));
 			
 		//}
 		
@@ -148,18 +143,22 @@ public:
 	virtual void print(int time )
 	{
 		
-			//HRGN rgn = CreateRectRgn(0, 540, 1080, 720);
-			//setcliprgn(rgn);
-			//clearcliprgn();
-			//cleardevice();
-			//setbkcolor(BLUE);
-			setcolor(RED);
-			setbkcolor(TRANSPARENT);
-		//	settextstyle((time%7), 0, _T("方正舒体"));
-			outtextxy(650, 600, _T("沈辰 202221147064"));
-			outtextxy(500, 650, _T("第四模块:月亮、系统整合及界面设计"));
-			//outtextxy(325, 320, _T("沈辰 202221147064"));
-			//outtextxy(450, 370, _T("第四模块：系统整合及界面设计"));
+		int colorChange3;
+		int colorChange2;
+		int angleChange;
+		colorChange3 = rand() % 255;
+		colorChange2 = 200 + rand() % 55;
+		int color = RGB(static_cast<BYTE>(colorChange2), static_cast<BYTE>(colorChange3), static_cast<BYTE>(colorChange3));
+		int redius = 20;
+		int x = (int)(cos(time / 3) * redius);
+		int y = (int)(sin(time / 3) * redius);
+		settextcolor(color);
+		setbkcolor(TRANSPARENT);
+		settextstyle(22, 0, _T("微软雅黑"));
+		setbkmode(TRANSPARENT);
+
+		outtextxy(700 + x, 600 + y, _T("沈辰 202221147064"));
+		outtextxy(700 + x, 650 + y, _T("第四模块：月亮，系统整合及界面设计"));
 
 			
 	}
