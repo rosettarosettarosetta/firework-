@@ -45,9 +45,6 @@
     <ClCompile Include="fire.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="printmode.cpp">
-      <Filter>源文件\队员字幕</Filter>
-    </ClCompile>
     <ClCompile Include="textprint.cpp">
       <Filter>源文件\队员字幕</Filter>
     </ClCompile>
@@ -82,9 +79,6 @@
     </ClInclude>
     <ClInclude Include="fire.h">
       <Filter>头文件\图形</Filter>
-    </ClInclude>
-    <ClInclude Include="标头.h">
-      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

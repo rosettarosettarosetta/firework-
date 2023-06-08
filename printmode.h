@@ -71,24 +71,6 @@ public:
 	{}
 	virtual void print(int time)
 	{
-		/*
-		int redius = 300;
-		int coordx = 1080 / 2 + 250;
-		int coordy = 720 / 2 + 50;
-		
-		
-		int num = 60;
-		double n = 1;
-		
-		double hudu = (pai / 180 * (time%30) * (360 / num));
-			int x = (int)(coordx + cos(hudu) * redius);
-			int y = (int)(coordy - sin(hudu) * redius);
-			
-			
-			settextstyle(int(10 + n), 0, _T("·½ÕıÊæÌå"));
-			n += 0.5;
-			//n += 1;
-		*/
 		int colorChange3;
 		int colorChange2;
 		int angleChange;
