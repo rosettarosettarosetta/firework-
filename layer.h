@@ -16,6 +16,7 @@ public:
 	void unchanged();
 	void Refresh();
 	int get_x();
+	void bless(int);
 	int get_y();
 	void mouse(int);
 	friend void moon(layer& l);

@@ -3,6 +3,7 @@
 #include <easyx.h>
 #include"star.h"
 #include"logo.h"
+#include"printmode.h"
 #include"shape.h"
 #include <graphics.h>
 
@@ -51,7 +52,13 @@ void layer::unchanged()
 }
 
 
-
+void layer::bless(int time)
+{
+	wchar_t zhufuyu[] = L"东风夜放花千树，月儿圆，星点缀，香车宝羊堵满路，鞭炮声，烟花绽，一派歌舞升平，花灯吐艳迎佳节，短信传情祝福热。祝节日快乐！";
+	Onebyone o(zhufuyu);
+	ptr = &o;
+	ptr->print(time);
+}
 
 void moon(layer& l)//访问layer类的私有成员
 {
@@ -75,7 +82,7 @@ int layer::get_y()
 
 void layer::mouse(int time)
 {
-	
+	bless(time);
 	if (MouseHit())
 	{
 		// 获取鼠标事件的信息

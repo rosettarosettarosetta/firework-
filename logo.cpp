@@ -24,12 +24,25 @@ void Logo::Drawlogo()//绘制logo
 	solidpie(x - 65, y - 32, x + 65, y + 62, 0, 0.33);
 }
 
-void Logo::getinformation(int x, int y, COLORREF fill, float a1)//logo的xy坐标，填充色，背景色，缩放比例
+void Logo::getinformation(int xx, int yy, COLORREF fill, float a1)//logo的xy坐标，填充色，背景色，缩放比例
 {
-	x = x;
-	y = y;
+	x = xx;
+	y = yy;
 	color = fill;
 
 	a = a1;
 	Drawlogo();
 }
+
+ Logo::Logo()
+ {
+
+ }
+ void Logo::update(int i)
+ {
+
+ }
+ void Logo::draw(int i)
+ {
+
+ }

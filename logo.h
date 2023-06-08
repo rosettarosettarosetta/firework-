@@ -29,6 +29,9 @@ private:
 
 
 public:
+	Logo();
+	void  update(int) ;
+	 void draw(int) ;
 	void getinformation(int, int, COLORREF, float);//logo的xy坐标，填充色，背景色，缩放比例
 	
 };

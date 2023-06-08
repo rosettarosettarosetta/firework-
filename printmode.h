@@ -10,9 +10,8 @@ class Onebyone :public Textprint//字一个一个出现
 public:
 	Onebyone(wchar_t a[]) :Textprint(a)
 	{}
-	virtual void print()
+	virtual void print(int time)
 	{
-		srand((unsigned int)time(NULL));
 		int x = 150;
 		int y = 250;
 		for (int i = 0; getstr(i); i += 1)
