@@ -17,7 +17,9 @@ public:
 		for (int i = 0; getstr(i); i += 1)
 		{
 			settextcolor(RGB(rand() % 256, rand() % 256, rand() % 256));
+
 			settextstyle(30, 0, _T("·½ÕýÊæÌå"));
+			setbkmode(TRANSPARENT); 
 			outtextxy(x, y, getstr(i));
 			x += 40;
 			if (x >= 1000)

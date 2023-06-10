@@ -5,12 +5,15 @@
 #include"logo.h"
 #include"printmode.h"
 #include"shape.h"
+#include"music.h"
+#pragma comment(lib,"winmm.lib")
 #include <graphics.h>
 
 wchar_t a[1] = { 0 };//没得用
 
 layer::layer(int xx ,int yy,int sum):x(xx),y(yy),Stars(sum),fire(xx,yy)
 {
+	PlaySound(LPWSTR(IDR_WAVE1), GetModuleHandle(NULL), SND_RESOURCE | SND_ASYNC | SND_LOOP);
 	background(x,y);
 	cleardevice();        // 清空屏幕
 }

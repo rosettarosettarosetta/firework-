@@ -6,6 +6,10 @@ class Textprint
 {
 public:
 	Textprint(wchar_t a[]);
+	~Textprint()
+	{
+
+	}
 	void setstr(wchar_t a[]);
 	wchar_t getstr(int );
     virtual void print(int ) = 0;

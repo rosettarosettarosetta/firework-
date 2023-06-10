@@ -5,9 +5,6 @@ void Logo::Drawlogo()//ªÊ÷∆logo
 	size(a);
 	setColor();
 	solidrectangle(x - 70, y + 20, x + 70, y + 25);
-	//setBackColor();
-	solidrectangle(x - 65, y + 15, x + 65, y + 20);
-	setColor();
 	for (int i = 3; i < 27; i++)
 	{
 		float k = i;

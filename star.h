@@ -24,6 +24,7 @@ class star :public shape
 {
 public:
 	star(int);
+	~star();
 	//void setStar(int);
 	void update(int);
 	virtual void draw(int) ;

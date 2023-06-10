@@ -20,11 +20,7 @@ int main()
 {
     srand(static_cast<unsigned int>(time(0)));
 
-    //menu Menu;
-    PlaySound(LPWSTR(IDR_WAVE1), GetModuleHandle(NULL), SND_RESOURCE | SND_ASYNC | SND_LOOP);
-
     layer stars;
-    
     stars.Refresh();
 
     _getch();  // 等待用户按下任意键继续

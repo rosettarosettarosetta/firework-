@@ -1,7 +1,7 @@
 #include"shape.h"
 #include <graphics.h>
 #include <easyx.h>
-//shape::shape(COLORREF c): color(c)
+
 shape::shape() 
 {
   
@@ -16,4 +16,9 @@ void shape::fillcolor()
 void shape::getcolor(COLORREF cl)
 {
     color = cl;
+}
+
+shape::~shape()
+{
+
 }

@@ -14,6 +14,10 @@ star::star(int number) :sum(number)//, shape(InvalidColor)
 	}
 } 
 
+star::~star()
+{
+}
+
 void star::update(int time)
 {
 
@@ -65,26 +69,3 @@ void star::draw(int i)
 	solidpolygon(stars[i].place, 5);
 }
 
-/*
-void star::setStar(int i)
-{
-	setfillcolor(stars[i].color);
-	setlinecolor(stars[i].color);
-	double a = pi / 2 + stars[i].angle;
-
-	for (int t = 0; t < 5; t++)
-	{
-		stars[i].place[t].x = int(stars[i].x + cos(a) * stars[i].r);
-		stars[i].place[t].y = int(stars[i].y - sin(a) * stars[i].r);
-		a += pi * 4 / 5;
-	}
-
-	setpolyfillmode(WINDING);
-	// 设置填充颜色为红色
-	setfillcolor(YELLOW);
-	// 绘制五角星(无边框)
-	solidpolygon(stars[i].place, 5);
-
-}
-
-*/

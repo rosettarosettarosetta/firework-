@@ -23,7 +23,6 @@ public:
 	friend void setclipcircle(int, int, int);
 private:
 	IMAGE img;
-	IMAGE img2;
 	vector<shape*> shapes_;
 	int x, y;
 	void background(int,int);

@@ -22,7 +22,7 @@ class shape
 {
 public:
 	shape();
-	//virtual ~shape();
+	~shape();
 	virtual void update(int) = 0;
 	virtual void draw(int) =0;
 	void fillcolor();
